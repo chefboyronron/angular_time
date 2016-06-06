@@ -50,7 +50,7 @@ app.factory("loginService", function($http){
 	factory.login = function(user, scope){
 		var $request = $http.post("php/user.php", user);
 		$request.then(function(result){
-			if(result.data.msg == "success"){
+			if(result.data.error == false){
 				scope.responseMsg = "Correct Information";
 			}else{
 				scope.responseMsg = "Username or Password is incorrect.";
