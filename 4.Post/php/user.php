@@ -12,9 +12,9 @@ $DummyPassword = "12345";
 
 //Proccess
 if($username == $DummyUsername && $password == $DummyPassword){
-	echo json_encode(array("msg"=>"success"));
+	echo json_encode(array("error"=>FALSE));
 }else{
-	echo json_encode(array("msg"=>"failed"));
+	echo json_encode(array("error"=>TRUE));
 }
 
 
